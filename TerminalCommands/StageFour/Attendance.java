@@ -27,7 +27,8 @@ public class Attendance{
  }
 
  public static void main (String args[]){
-     System.out.println("WELCOME TO EMPLOYEE WAGE PROBLEM");
+     System.out.println("WELCOME TO CHECK THE WAGES OF EMPLOYEES");
+     System.out.println("RANDOM aTTENDANCE CHECK OF EMPLOYEES");
      Attendance ewc=new Attendance();
      ewc.empAttendance();
  }
