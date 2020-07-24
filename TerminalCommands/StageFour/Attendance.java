@@ -23,7 +23,7 @@ public class Attendance{
  public int empAttendance()
  {
    Random myRan=new Random();
-   int myRanVar=myRan.nextInt(2);
+   int myRanVar=myRan.nextInt(3); 
    System.out.println("Random Integers: "+myRanVar);
    return myRanVar;
  }
@@ -48,7 +48,13 @@ public static void main (String args[]){
          Attendance ewc1=new Attendance(20,0);
          ewc1.calSalary();
        }
-      else
+       if(resultAttendance==1)
+       {
+         System.out.println("Part time employee");
+         Attendance ewc1=new Attendance(20,4);
+         ewc1.calSalary();
+       }
+      if(resultAttendance==2)
        {
          System.out.println("Employee is Present");
          Attendance ewc1=new Attendance(20,8);
