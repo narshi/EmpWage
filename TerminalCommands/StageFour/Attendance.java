@@ -5,36 +5,33 @@ import java.util.ArrayList;
 
 public class Attendance{
 
-   int empWagePerHrs,empHrs,empSalary,daysPerMonth,TotalEmpSalary,totalMaxHr,i,totalHr;
-
- Attendance()
- {
-   System.out.println("Default Constructor called");
- }
+ private final int empWagePerHrs;
+ private final int daysPerMonth;
+ private final int totalMaxHr;
+ private final int partTimeHrs;
+ private final int fullTimeHrs;
 
   //Parameterized constructor
- public Attendance(int wagePerHrs, int monthDays, int maxHrs)
+ public Attendance(int empWagePerHrs, int daysPerMonth, int totalMaxHr, int partTimeHrs, int fullTimeHrs)
  {
-    this.empWagePerHrs=wagePerHrs;
-    this.daysPerMonth=monthDays;
-    this.totalMaxHr=maxHrs;
+      this.empWagePerHrs=empWagePerHrs;
+   this.daysPerMonth=daysPerMonth;
+   this.totalMaxHr=totalMaxHr;
+   this.partTimeHrs=partTimeHrs;
+   this.fullTimeHrs=fullTimeHrs;
  }
 
  public int empAttendance()
  {
    Random myRan=new Random();
-   int myRanVar=myRan.nextInt(3); 
-   System.out.println("Random Integers: "+myRanVar);
+   int myRanVar=myRan.nextInt(3);
+   System.out.println("\nRandom Integers: "+myRanVar);
    return myRanVar;
  }
 
-  public void calSalary()
+ public void calSalary()
  {
-    empHrs=0;
-    empSalary=0;
-    TotalEmpSalary=0;
-    totalHr=0;
-    i=0;
+    int empHrs=0,empSalary=0,TotalEmpSalary=0,totalHr=0,i=0;
 
     while(totalHr <= totalMaxHr && i < daysPerMonth)
     {
@@ -47,11 +44,11 @@ public class Attendance{
                   break;
            case 1:
                   System.out.println("Employee is Present: PART TIME");
-                  empHrs=4;
+                  empHrs=partTimeHrs;
                   break;
            case 2:
                   System.out.println("Employee is Present: FULL TIME");
-                  empHrs=8;
+                  empHrs=fullTimeHrs;
                   break;
           default : System.out.println("Invalid");
       }
@@ -70,9 +67,8 @@ public class Attendance{
      System.out.println("---------------------------------------------------");
      System.out.println("WELCOME TO EMPLOYEE WAGE PROBLEM");
      System.out.println("---------------------------------------------------");
-     Attendance ewc=new Attendance(20,20,100);
+     Attendance ewc=new Attendance(20,20,100,4,8);
      ewc.calSalary();
  }
 
 }
-
