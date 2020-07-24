@@ -1,33 +1,35 @@
-
-
-package wages;  
+  
 import java.io.*;
 import java.util.Random;
 import java.util.ArrayList;
 
 public class Attendance{
 
-	static int count = 0;
-	
-	public static void main(String[] args) {
-		int upperbound = 2;
-			ArrayList<Integer> present = new ArrayList<Integer>();
-    ArrayList<Integer> absent = new ArrayList<Integer>();
-	Random rand = new Random();
-	int int_random = rand.nextInt(upperbound);
-	double double_random=rand.nextFloat();
-	if(int_random==1){
-		present.add(int_random);
-		count++;
-	}else{
-		absent.add(int_random);
-		count++;
-	}
-	System.out.println("Total employees = "+count);
-	System.out.println("No. of people present = "+present.size());
-	System.out.println("No. of people absent = "+absent.size());
-		
-	}
+ Attendance()
+ {
+   System.out.println("Default Constructor called");
+ }
 
+ public void empAttendance()
+ {
+   Random myRan=new Random();
+   int myRanVar=myRan.nextInt(2);
+   System.out.println("Random Integers: "+myRanVar);
+
+	    if(myRanVar==0)
+       {
+         System.out.println("Employee Absent");
+       }
+      else
+       {
+         System.out.println("Employee Present");
+       }
+ }
+
+ public static void main (String args[]){
+     System.out.println("WELCOME TO EMPLOYEE WAGE PROBLEM");
+     Attendance ewc=new Attendance();
+     ewc.empAttendance();
+ }
 
 }
