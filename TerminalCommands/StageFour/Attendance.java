@@ -61,19 +61,17 @@ public class Attendance{
  }
 
  public static void main (String args[]){
-     System.out.println("------------------------------------------------------------------------------");
-     System.out.println("                        WELCOME TO EMPLOYEE WAGE PROBLEM                      ");
-     System.out.println("------------------------------------------------------------------------------");
+     System.out.println("------------**********  WELCOME TO WAGE CALCULATION  *****------------------");
 
-     Attendance relianceCompany=new Attendance(20,20,100,4,8,"Reliance Smart");
-     int result1=relianceCompany.calSalary();
-     System.out.println("Company Name: "+relianceCompany.companyName);
+     Attendance companyOne=new Attendance(20,20,100,4,8,"Tata and Brothers");
+     int result1=companyOne.calSalary();
+     System.out.println("Company Name: "+companyOne.companyName);
      System.out.println("The Employee Wage for company: "+result1);
      System.out.println("------------------------------------------------------------------------------");
 
-     Attendance dmartCompany=new Attendance(22,22,100,5,9,"Dmart");
-     int result2=dmartCompany.calSalary();
-     System.out.println("Company Name: "+dmartCompany.companyName);
+     Attendance companyTwo=new Attendance(22,22,100,5,9,"Cipla and Pharma");
+     int result2=companyTwo.calSalary();
+     System.out.println("Company Name: "+companyTwo.companyName);
      System.out.println("The Employee Wage for company: "+result2);
      System.out.println("------------------------------------------------------------------------------");
  }
