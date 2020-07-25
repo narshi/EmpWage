@@ -37,9 +37,7 @@ public class Attendance{
 
 
 public static void main (String args[]){
-     System.out.println("---------------------------------------------------");
-     System.out.println("WELCOME TO EMPLOYEE WAGE PROBLEM");
-     System.out.println("---------------------------------------------------");
+     System.out.println("**---Wages of our employees----**");
      Attendance ewc=new Attendance();
      int resultAttendance=ewc.empAttendance();
      if(resultAttendance==0)
